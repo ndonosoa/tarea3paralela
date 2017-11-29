@@ -52,6 +52,7 @@ float Sumar(Punto pto[]){
 				perimetro += CalcularDistancia(pto[y-1],pto[z-1]);
 
 			}
+			return perimetro;
 		}
 		fclose(infile);
 }
@@ -65,14 +66,13 @@ void MostrarPuntos(Punto pto[]){
 }
 
 int main(){
-	for(int i =0;i<100;i++){
+
 	Punto pto[5000];
 	float perimetro;
 	//Triangulo tri[5000];
 	LlenarPuntos(pto);
 	perimetro = Sumar(pto);
-	//cout<<"La suma del perimetro total es: "<<perimetro<<endl;
+	cout<<"La suma del perimetro total es: "<<perimetro<<endl;
 	//MostrarPuntos(pto);
-	}
 	return 0;
 }
